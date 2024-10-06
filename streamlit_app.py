@@ -21,7 +21,7 @@ ingredients_list=st.multiselect('Choose upto 5 ingredients:',
                                max_selections=5)
 if ingredients_list:
     for fruits_chosen in ingredients_list:
-        ingredients_string+=fruits_chosen
+        ingredients_string+=fruits_chosen+ ' '
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
         fv_df=st.dataframe(fruityvice_response.json(),use_container_width=True)
  
